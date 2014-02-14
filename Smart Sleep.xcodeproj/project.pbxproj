@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB4DE98118AD7667009C52A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98018AD7667009C52A1 /* Foundation.framework */; };
+		DB4DE98318AD7667009C52A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98218AD7667009C52A1 /* CoreGraphics.framework */; };
+		DB4DE98518AD7667009C52A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98418AD7667009C52A1 /* UIKit.framework */; };
+		DB4DE98B18AD7667009C52A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB4DE98918AD7667009C52A1 /* InfoPlist.strings */; };
+		DB4DE98D18AD7667009C52A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE98C18AD7667009C52A1 /* main.m */; };
+		DB4DE99118AD7667009C52A1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE99018AD7667009C52A1 /* AppDelegate.m */; };
+		DB4DE99418AD7667009C52A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4DE99218AD7667009C52A1 /* Main.storyboard */; };
+		DB4DE99718AD7667009C52A1 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE99618AD7667009C52A1 /* FirstViewController.m */; };
+		DB4DE99A18AD7667009C52A1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE99918AD7667009C52A1 /* SecondViewController.m */; };
+		DB4DE99C18AD7667009C52A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB4DE99B18AD7667009C52A1 /* Images.xcassets */; };
+		DB4DE9A318AD7667009C52A1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE9A218AD7667009C52A1 /* XCTest.framework */; };
+		DB4DE9A418AD7667009C52A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98018AD7667009C52A1 /* Foundation.framework */; };
+		DB4DE9A518AD7667009C52A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98418AD7667009C52A1 /* UIKit.framework */; };
+		DB4DE9AD18AD7667009C52A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DB4DE9AB18AD7667009C52A1 /* InfoPlist.strings */; };
+		DB4DE9AF18AD7667009C52A1 /* Smart_SleepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE9AE18AD7667009C52A1 /* Smart_SleepTests.m */; };
+		DB4DE9BA18AD76AB009C52A1 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE9B918AD76AB009C52A1 /* SettingsViewController.m */; };
+		DB4DE9BD18AD76B8009C52A1 /* MainAlarmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE9BC18AD76B8009C52A1 /* MainAlarmViewController.m */; };
+		DB4DE9C318AD99F5009C52A1 /* ModifyAlarmTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4DE9C218AD99F5009C52A1 /* ModifyAlarmTimeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB4DE9A618AD7667009C52A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB4DE97518AD7667009C52A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB4DE97C18AD7667009C52A1;
+			remoteInfo = "Smart Sleep";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB4DE97D18AD7667009C52A1 /* Smart Sleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Sleep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4DE98018AD7667009C52A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DB4DE98218AD7667009C52A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DB4DE98418AD7667009C52A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DB4DE98818AD7667009C52A1 /* Smart Sleep-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Smart Sleep-Info.plist"; sourceTree = "<group>"; };
+		DB4DE98A18AD7667009C52A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB4DE98C18AD7667009C52A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB4DE98E18AD7667009C52A1 /* Smart Sleep-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smart Sleep-Prefix.pch"; sourceTree = "<group>"; };
+		DB4DE98F18AD7667009C52A1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB4DE99018AD7667009C52A1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB4DE99318AD7667009C52A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB4DE99518AD7667009C52A1 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		DB4DE99618AD7667009C52A1 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		DB4DE99818AD7667009C52A1 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		DB4DE99918AD7667009C52A1 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		DB4DE99B18AD7667009C52A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DB4DE9A118AD7667009C52A1 /* Smart SleepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smart SleepTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB4DE9A218AD7667009C52A1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DB4DE9AA18AD7667009C52A1 /* Smart SleepTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Smart SleepTests-Info.plist"; sourceTree = "<group>"; };
+		DB4DE9AC18AD7667009C52A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DB4DE9AE18AD7667009C52A1 /* Smart_SleepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Smart_SleepTests.m; sourceTree = "<group>"; };
+		DB4DE9B818AD76AB009C52A1 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		DB4DE9B918AD76AB009C52A1 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		DB4DE9BB18AD76B8009C52A1 /* MainAlarmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainAlarmViewController.h; sourceTree = "<group>"; };
+		DB4DE9BC18AD76B8009C52A1 /* MainAlarmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainAlarmViewController.m; sourceTree = "<group>"; };
+		DB4DE9C118AD99F5009C52A1 /* ModifyAlarmTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyAlarmTimeViewController.h; sourceTree = "<group>"; };
+		DB4DE9C218AD99F5009C52A1 /* ModifyAlarmTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyAlarmTimeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB4DE97A18AD7667009C52A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE98318AD7667009C52A1 /* CoreGraphics.framework in Frameworks */,
+				DB4DE98518AD7667009C52A1 /* UIKit.framework in Frameworks */,
+				DB4DE98118AD7667009C52A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4DE99E18AD7667009C52A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE9A318AD7667009C52A1 /* XCTest.framework in Frameworks */,
+				DB4DE9A518AD7667009C52A1 /* UIKit.framework in Frameworks */,
+				DB4DE9A418AD7667009C52A1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB4DE97418AD7667009C52A1 = {
+			isa = PBXGroup;
+			children = (
+				DB4DE98618AD7667009C52A1 /* Smart Sleep */,
+				DB4DE9A818AD7667009C52A1 /* Smart SleepTests */,
+				DB4DE97F18AD7667009C52A1 /* Frameworks */,
+				DB4DE97E18AD7667009C52A1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB4DE97E18AD7667009C52A1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE97D18AD7667009C52A1 /* Smart Sleep.app */,
+				DB4DE9A118AD7667009C52A1 /* Smart SleepTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB4DE97F18AD7667009C52A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE98018AD7667009C52A1 /* Foundation.framework */,
+				DB4DE98218AD7667009C52A1 /* CoreGraphics.framework */,
+				DB4DE98418AD7667009C52A1 /* UIKit.framework */,
+				DB4DE9A218AD7667009C52A1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB4DE98618AD7667009C52A1 /* Smart Sleep */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE98F18AD7667009C52A1 /* AppDelegate.h */,
+				DB4DE99018AD7667009C52A1 /* AppDelegate.m */,
+				DB4DE99218AD7667009C52A1 /* Main.storyboard */,
+				DB4DE9C118AD99F5009C52A1 /* ModifyAlarmTimeViewController.h */,
+				DB4DE9C218AD99F5009C52A1 /* ModifyAlarmTimeViewController.m */,
+				DB4DE9B818AD76AB009C52A1 /* SettingsViewController.h */,
+				DB4DE9B918AD76AB009C52A1 /* SettingsViewController.m */,
+				DB4DE9BB18AD76B8009C52A1 /* MainAlarmViewController.h */,
+				DB4DE9BC18AD76B8009C52A1 /* MainAlarmViewController.m */,
+				DB4DE99B18AD7667009C52A1 /* Images.xcassets */,
+				DB4DE98718AD7667009C52A1 /* Supporting Files */,
+			);
+			path = "Smart Sleep";
+			sourceTree = "<group>";
+		};
+		DB4DE98718AD7667009C52A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE99518AD7667009C52A1 /* FirstViewController.h */,
+				DB4DE99618AD7667009C52A1 /* FirstViewController.m */,
+				DB4DE99818AD7667009C52A1 /* SecondViewController.h */,
+				DB4DE99918AD7667009C52A1 /* SecondViewController.m */,
+				DB4DE98818AD7667009C52A1 /* Smart Sleep-Info.plist */,
+				DB4DE98918AD7667009C52A1 /* InfoPlist.strings */,
+				DB4DE98C18AD7667009C52A1 /* main.m */,
+				DB4DE98E18AD7667009C52A1 /* Smart Sleep-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB4DE9A818AD7667009C52A1 /* Smart SleepTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE9AE18AD7667009C52A1 /* Smart_SleepTests.m */,
+				DB4DE9A918AD7667009C52A1 /* Supporting Files */,
+			);
+			path = "Smart SleepTests";
+			sourceTree = "<group>";
+		};
+		DB4DE9A918AD7667009C52A1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB4DE9AA18AD7667009C52A1 /* Smart SleepTests-Info.plist */,
+				DB4DE9AB18AD7667009C52A1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB4DE97C18AD7667009C52A1 /* Smart Sleep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4DE9B218AD7667009C52A1 /* Build configuration list for PBXNativeTarget "Smart Sleep" */;
+			buildPhases = (
+				DB4DE97918AD7667009C52A1 /* Sources */,
+				DB4DE97A18AD7667009C52A1 /* Frameworks */,
+				DB4DE97B18AD7667009C52A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smart Sleep";
+			productName = "Smart Sleep";
+			productReference = DB4DE97D18AD7667009C52A1 /* Smart Sleep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB4DE9A018AD7667009C52A1 /* Smart SleepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB4DE9B518AD7667009C52A1 /* Build configuration list for PBXNativeTarget "Smart SleepTests" */;
+			buildPhases = (
+				DB4DE99D18AD7667009C52A1 /* Sources */,
+				DB4DE99E18AD7667009C52A1 /* Frameworks */,
+				DB4DE99F18AD7667009C52A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB4DE9A718AD7667009C52A1 /* PBXTargetDependency */,
+			);
+			name = "Smart SleepTests";
+			productName = "Smart SleepTests";
+			productReference = DB4DE9A118AD7667009C52A1 /* Smart SleepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB4DE97518AD7667009C52A1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = handWave;
+				TargetAttributes = {
+					DB4DE9A018AD7667009C52A1 = {
+						TestTargetID = DB4DE97C18AD7667009C52A1;
+					};
+				};
+			};
+			buildConfigurationList = DB4DE97818AD7667009C52A1 /* Build configuration list for PBXProject "Smart Sleep" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB4DE97418AD7667009C52A1;
+			productRefGroup = DB4DE97E18AD7667009C52A1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB4DE97C18AD7667009C52A1 /* Smart Sleep */,
+				DB4DE9A018AD7667009C52A1 /* Smart SleepTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB4DE97B18AD7667009C52A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE99C18AD7667009C52A1 /* Images.xcassets in Resources */,
+				DB4DE98B18AD7667009C52A1 /* InfoPlist.strings in Resources */,
+				DB4DE99418AD7667009C52A1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4DE99F18AD7667009C52A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE9AD18AD7667009C52A1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB4DE97918AD7667009C52A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE9C318AD99F5009C52A1 /* ModifyAlarmTimeViewController.m in Sources */,
+				DB4DE99A18AD7667009C52A1 /* SecondViewController.m in Sources */,
+				DB4DE9BD18AD76B8009C52A1 /* MainAlarmViewController.m in Sources */,
+				DB4DE99118AD7667009C52A1 /* AppDelegate.m in Sources */,
+				DB4DE9BA18AD76AB009C52A1 /* SettingsViewController.m in Sources */,
+				DB4DE99718AD7667009C52A1 /* FirstViewController.m in Sources */,
+				DB4DE98D18AD7667009C52A1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB4DE99D18AD7667009C52A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB4DE9AF18AD7667009C52A1 /* Smart_SleepTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB4DE9A718AD7667009C52A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB4DE97C18AD7667009C52A1 /* Smart Sleep */;
+			targetProxy = DB4DE9A618AD7667009C52A1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB4DE98918AD7667009C52A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB4DE98A18AD7667009C52A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DB4DE99218AD7667009C52A1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB4DE99318AD7667009C52A1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DB4DE9AB18AD7667009C52A1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB4DE9AC18AD7667009C52A1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB4DE9B018AD7667009C52A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DB4DE9B118AD7667009C52A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DB4DE9B318AD7667009C52A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smart Sleep/Smart Sleep-Prefix.pch";
+				INFOPLIST_FILE = "Smart Sleep/Smart Sleep-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DB4DE9B418AD7667009C52A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smart Sleep/Smart Sleep-Prefix.pch";
+				INFOPLIST_FILE = "Smart Sleep/Smart Sleep-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DB4DE9B618AD7667009C52A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Smart Sleep.app/Smart Sleep";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smart Sleep/Smart Sleep-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Smart SleepTests/Smart SleepTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DB4DE9B718AD7667009C52A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Smart Sleep.app/Smart Sleep";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Smart Sleep/Smart Sleep-Prefix.pch";
+				INFOPLIST_FILE = "Smart SleepTests/Smart SleepTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB4DE97818AD7667009C52A1 /* Build configuration list for PBXProject "Smart Sleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4DE9B018AD7667009C52A1 /* Debug */,
+				DB4DE9B118AD7667009C52A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB4DE9B218AD7667009C52A1 /* Build configuration list for PBXNativeTarget "Smart Sleep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4DE9B318AD7667009C52A1 /* Debug */,
+				DB4DE9B418AD7667009C52A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DB4DE9B518AD7667009C52A1 /* Build configuration list for PBXNativeTarget "Smart SleepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB4DE9B618AD7667009C52A1 /* Debug */,
+				DB4DE9B718AD7667009C52A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB4DE97518AD7667009C52A1 /* Project object */;
+}
