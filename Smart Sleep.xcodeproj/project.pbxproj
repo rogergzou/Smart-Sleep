@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0A0DD618AE0C2300263F60 /* AlarmItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB0A0DD518AE0C2300263F60 /* AlarmItem.m */; };
 		DB4DE98118AD7667009C52A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98018AD7667009C52A1 /* Foundation.framework */; };
 		DB4DE98318AD7667009C52A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98218AD7667009C52A1 /* CoreGraphics.framework */; };
 		DB4DE98518AD7667009C52A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4DE98418AD7667009C52A1 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB0A0DD418AE0C2300263F60 /* AlarmItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmItem.h; sourceTree = "<group>"; };
+		DB0A0DD518AE0C2300263F60 /* AlarmItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmItem.m; sourceTree = "<group>"; };
 		DB4DE97D18AD7667009C52A1 /* Smart Sleep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smart Sleep.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB4DE98018AD7667009C52A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DB4DE98218AD7667009C52A1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -133,6 +136,8 @@
 				DB4DE9B918AD76AB009C52A1 /* SettingsViewController.m */,
 				DB4DE9BB18AD76B8009C52A1 /* MainAlarmViewController.h */,
 				DB4DE9BC18AD76B8009C52A1 /* MainAlarmViewController.m */,
+				DB0A0DD418AE0C2300263F60 /* AlarmItem.h */,
+				DB0A0DD518AE0C2300263F60 /* AlarmItem.m */,
 				DB4DE99B18AD7667009C52A1 /* Images.xcassets */,
 				DB4DE98718AD7667009C52A1 /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 			files = (
 				DB4DE9C318AD99F5009C52A1 /* ModifyAlarmTimeViewController.m in Sources */,
 				DB4DE99A18AD7667009C52A1 /* SecondViewController.m in Sources */,
+				DB0A0DD618AE0C2300263F60 /* AlarmItem.m in Sources */,
 				DB4DE9BD18AD76B8009C52A1 /* MainAlarmViewController.m in Sources */,
 				DB4DE99118AD7667009C52A1 /* AppDelegate.m in Sources */,
 				DB4DE9BA18AD76AB009C52A1 /* SettingsViewController.m in Sources */,
@@ -484,6 +490,7 @@
 				DB4DE9B418AD7667009C52A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB4DE9B518AD7667009C52A1 /* Build configuration list for PBXNativeTarget "Smart SleepTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +499,7 @@
 				DB4DE9B718AD7667009C52A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

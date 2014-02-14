@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ModifyAlarmTimeViewController.h"
+#import "AlarmItem.h"
 
 @interface MainAlarmViewController : UIViewController <TimeModalDelegate>
 

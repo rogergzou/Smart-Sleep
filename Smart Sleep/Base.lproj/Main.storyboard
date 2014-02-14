@@ -176,8 +176,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiH-Mh-ykR">
-                                <rect key="frame" x="54" y="378" width="67" height="71"/>
+                                <rect key="frame" x="20" y="378" width="121" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78598436689847717" green="0.50282998942978407" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Set">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -196,8 +198,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGv-ZJ-ymd">
-                                <rect key="frame" x="203" y="378" width="82" height="71"/>
+                                <rect key="frame" x="179" y="378" width="121" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.44725419151461687" blue="0.47010300835183438" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Modify">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -211,6 +215,7 @@
                     <tabBarItem key="tabBarItem" title="Alarm" id="NSp-hf-heI"/>
                     <connections>
                         <outlet property="SetAlarm" destination="NiH-Mh-ykR" id="HOe-NJ-TAC"/>
+                        <outlet property="alarmTable" destination="9wz-tD-7YA" id="71H-oA-nmV"/>
                         <outlet property="timeLabel" destination="sXy-mE-JEI" id="9hS-XQ-pVx"/>
                         <segue destination="R8i-EO-d3p" kind="modal" identifier="modifyIt" id="3V2-1E-oJB"/>
                     </connections>
