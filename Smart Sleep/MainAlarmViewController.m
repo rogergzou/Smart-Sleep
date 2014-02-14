@@ -26,7 +26,19 @@
 
 - (IBAction)modifyPressed:(id)sender {
     [self performSegueWithIdentifier:@"modifyIt" sender:sender];
+}
 
+- (IBAction)alarmPressed:(id)sender {
+    NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval:self.seconds];
+    // need to set alarm, add the minute :O
+    
+    UILocalNotification *alarmNotification =[[UILocalNotification alloc]init];
+    alarmNotification.fireDate = alarmTime;
+    alarmNotification.alertBody = [NSString stringWithFormat: @"alert fired %@ %i", alarmTime, self.seconds];
+    alarmNotification.soundName = UILocalNotificationDefaultSoundName;
+    //alarmNotification.applicationIconBadgeNumber = 1;
+    [[UIApplication sharedApplication] scheduleLocalNotification:alarmNotification];
+    NSLog(@"scheduld for %@ %i", alarmTime, self.seconds);
 }
 
 /*- (IBAction)unwindToList:(UIStoryboardSegue *)sender
