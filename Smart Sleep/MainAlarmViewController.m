@@ -25,10 +25,11 @@
     self.timeLabel.text = [NSString stringWithFormat:@"%i seconds", self.seconds];
     
     //update table
-    [self loadTableData];
+    
+    [self.alarmTable reloadData];
 }
 
-- (void) loadTableData
+- (void) loadInitialTableData
 {
     AlarmItem *item1 = [[AlarmItem alloc]init];
     item1.date = [NSDate date];
@@ -82,6 +83,8 @@
     newItem.date = date;
     newItem.seconds=secs;
     [self.tableItems addObject:newItem];
+    /*NSArray *index = [NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]];
+    [self.alarmTable insertRowsAtIndexPaths:index withRowAnimation:UITableViewRowAnimationLeft];*/
     [self updateUI];
 }
 
@@ -139,6 +142,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    // set up initial table
+    [self loadInitialTableData];
+    
     [self updateUI];
 }
 
@@ -190,7 +196,7 @@ const int DEFAULT_SEC = 5;
     // Configure the cell...
     
     AlarmItem *theItem = self.tableItems[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat: @"date %@, secs %i",theItem.date, theItem.seconds];
+    cell.textLabel.text = [NSString stringWithFormat: @"secs %i, date %@", theItem.seconds, theItem.date];
     
     // implement later
     /*
