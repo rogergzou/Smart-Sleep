@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIButton *SetAlarm;
 @property (weak, nonatomic) IBOutlet UITableView *alarmTable;
-
+@property (strong, nonatomic) NSMutableArray *tableItems;
 
 
 @end
@@ -23,6 +23,18 @@
 - (void) updateUI
 {
     self.timeLabel.text = [NSString stringWithFormat:@"%i seconds", self.seconds];
+    
+    //update table
+    [self loadTableData];
+}
+
+- (void) loadTableData
+{
+    AlarmItem *item1 = [[AlarmItem alloc]init];
+    item1.date = [NSDate date];
+    item1.seconds = 12345;
+    [self.tableItems addObject:item1];
+    
 }
 
 - (IBAction)modifyPressed:(id)sender {
@@ -41,7 +53,7 @@
     [[UIApplication sharedApplication] scheduleLocalNotification:alarmNotification];
     NSLog(@"scheduld for %@ %i", alarmTime, self.seconds);
     
-    //[self addAlarmToTableWithDate:alarmTime secondInterval:self.seconds];
+    [self addAlarmToTableWithDate:alarmTime secondInterval:self.seconds];
     
 }
 /* nvm will do later
@@ -54,27 +66,31 @@
     {
         AlarmItem *
     }
-    
-    
+ NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
+ 
+ 
+ 
+ 
+ [userdefaults synchronize];
+ 
     return theresults;
 }
-
+*/
 -(void)addAlarmToTableWithDate: (NSDate *)date secondInterval:(int)secs
 {
-    NSUserDefaults *userdefaults = [NSUserDefaults standardUserDefaults];
-    
-    
-    
-    
-    [userdefaults synchronize];
+    AlarmItem *newItem = [[AlarmItem alloc]init];
+    newItem.date = date;
+    newItem.seconds=secs;
+    [self.tableItems addObject:newItem];
+    [self updateUI];
 }
 
-
+/*
 -(void)addAlarmTable:(NSSet *)objects
 {
     
 }
- */
+*/
 /*- (IBAction)unwindToList:(UIStoryboardSegue *)sender
 {
  
@@ -101,6 +117,13 @@
     self.seconds = intToPass;
     NSLog(@"received %i", intToPass);
     [self updateUI];
+}
+
+- (NSMutableArray *)tableItems
+{
+    if (!_tableItems)
+        _tableItems = [NSMutableArray array];
+    return _tableItems;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -132,5 +155,115 @@ const int DEFAULT_SEC = 5;
         _seconds = DEFAULT_SEC;
     return _seconds;
 }
+
+
+#pragma mark - Table view data source
+
+
+// commented out so static data shows up
+// JK to implement UITableViewDataSource protocol, uncommented.
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    //#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 1; //changed from 0
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    //return 0;
+    return [self.tableItems count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // I have no idea what this does...
+    
+    static NSString *cellIdentifier = @"AlarmWorkCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    if (cell == nil)
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    // Configure the cell...
+    
+    AlarmItem *theItem = self.tableItems[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat: @"date %@, secs %i",theItem.date, theItem.seconds];
+    
+    // implement later
+    /*
+    if (time is past) {
+        delete it
+    }
+    */
+    return cell;
+}
+
+
+
+
+/*
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
+
+/*
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
+
+/*
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
+
+/*
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
+ */
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    //AlarmItem *tappedItem = self.tableItems[indexPath.row];
+    //tappedItem.completed = !tappedItem.completed;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 
 @end

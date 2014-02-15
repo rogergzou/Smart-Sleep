@@ -10,4 +10,7 @@
 
 @interface AlarmItem : NSObject
 
+@property (strong, nonatomic) NSDate *date;
+@property (nonatomic) int seconds;
+
 @end

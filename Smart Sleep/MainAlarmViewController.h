@@ -10,7 +10,7 @@
 #import "ModifyAlarmTimeViewController.h"
 #import "AlarmItem.h"
 
-@interface MainAlarmViewController : UIViewController <TimeModalDelegate>
+@interface MainAlarmViewController : UIViewController <TimeModalDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) int seconds;
 

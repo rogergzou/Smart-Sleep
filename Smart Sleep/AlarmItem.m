@@ -8,6 +8,24 @@
 
 #import "AlarmItem.h"
 
+@interface AlarmItem()
+
+@end
+
 @implementation AlarmItem
+
+-(NSDate *)date
+{
+    if (!_date)
+        _date = [NSDate date];
+    return _date;
+}
+
+-(int) seconds
+{
+    if (!_seconds)
+        _seconds = 0;
+    return _seconds;
+}
 
 @end
