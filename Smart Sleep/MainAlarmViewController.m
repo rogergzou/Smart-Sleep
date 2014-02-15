@@ -48,7 +48,7 @@
     
     UILocalNotification *alarmNotification =[[UILocalNotification alloc]init];
     alarmNotification.fireDate = alarmTime;
-    alarmNotification.alertBody = [NSString stringWithFormat: @"alert fired %@ %i", alarmTime, self.seconds];
+    alarmNotification.alertBody = [NSString stringWithFormat: @"hey my alert fired %@ %i", alarmTime, self.seconds];
     alarmNotification.soundName = UILocalNotificationDefaultSoundName;
     //alarmNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:alarmNotification];
@@ -106,6 +106,10 @@
     }
  
 }*/
+
+
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"modifyIt"])
@@ -128,6 +132,11 @@
         _tableItems = [NSMutableArray array];
     return _tableItems;
 }
+
+
+
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -153,6 +162,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+// lazy instantiation, default settings
 
 const int DEFAULT_SEC = 5;
 - (int) seconds

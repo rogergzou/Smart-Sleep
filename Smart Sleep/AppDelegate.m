@@ -43,4 +43,24 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
+// inserted, handles local notifs?
+- (void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    if ([UIApplication sharedApplication].applicationState == UIApplicationStateActive)
+        [self showNotificationAlert:notification.alertBody];
+}
+
+-(void) showNotificationAlert:(NSString *)alertMsg
+{
+    if (!alertMsg)
+        alertMsg = @"blank";
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Alarm received" message:alertMsg delegate:self cancelButtonTitle:NSLocalizedString(@"OK!", nil) otherButtonTitles:@"wut", nil];
+    [alert show];
+    
+    //[UIApplication sharedApplication].applicationBadgeNumber = 0;
+}
+
+
 @end
