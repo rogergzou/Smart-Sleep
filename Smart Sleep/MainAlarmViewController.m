@@ -171,7 +171,6 @@
 	// Do any additional setup after loading the view.
     // set up initial table
     [self loadInitialTableData];
-    
     [self updateUI];
 }
 
@@ -180,8 +179,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 // lazy instantiation, default settings
 
@@ -309,6 +306,7 @@ const int DEFAULT_MIN = 0;
     //AlarmItem *tappedItem = self.tableItems[indexPath.row];
     //tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
 }
 
 
