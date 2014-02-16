@@ -69,7 +69,7 @@ const int SECOND = 4;
     }
 }
 
-const int NUMBER_OF_SECONDS_IN_SECONDLIST = 59;
+const int NUMBER_OF_SECONDS_IN_SECONDLIST = 120;
 const int SECONDS_INCREMENT = 5;
 -(NSArray *)secondList
 {

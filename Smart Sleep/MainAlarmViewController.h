@@ -13,6 +13,7 @@
 @interface MainAlarmViewController : UIViewController <TimeModalDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) int seconds;
+@property (nonatomic) int minutes;
 
 
 @end

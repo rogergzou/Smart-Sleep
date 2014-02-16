@@ -22,8 +22,10 @@
 
 - (void) updateUI
 {
-    self.timeLabel.text = [NSString stringWithFormat:@"%i seconds", self.seconds];
-    
+    //self.timeLabel.text = [NSString stringWithFormat:@"%i seconds", self.seconds];
+    if (self.seconds >= 60)
+        [self updateMinutesFromSeconds];
+    self.timeLabel.text = [NSString stringWithFormat:@"%i:%02i", self.minutes, self.seconds];
     //update table
     
     [self.alarmTable reloadData];
@@ -38,23 +40,34 @@
     
 }
 
+- (void) updateMinutesFromSeconds
+{
+    //assumes self.seconds >= 60
+    int leftoverSeconds = self.seconds % 60;
+    // will in future be self.seconds
+    self.minutes += ((self.seconds - leftoverSeconds) / 60);
+    self.seconds = leftoverSeconds;
+}
+
 - (IBAction)modifyPressed:(id)sender {
     [self performSegueWithIdentifier:@"modifyIt" sender:sender];
 }
 
 - (IBAction)alarmPressed:(id)sender {
-    NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval:self.seconds];
+    
+    int secondsIncludingMinutes = self.seconds + self.minutes * 60;
+    NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval:secondsIncludingMinutes];
     // need to set alarm, add the minute :O
     
     UILocalNotification *alarmNotification =[[UILocalNotification alloc]init];
     alarmNotification.fireDate = alarmTime;
-    alarmNotification.alertBody = [NSString stringWithFormat: @"hey my alert fired %@ %i", alarmTime, self.seconds];
+    alarmNotification.alertBody = [NSString stringWithFormat: @"hey my alert fired %@, min %i, sec %i", alarmTime, self.minutes, self.seconds];
     alarmNotification.soundName = UILocalNotificationDefaultSoundName;
     //alarmNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:alarmNotification];
-    NSLog(@"scheduld for %@ %i", alarmTime, self.seconds);
-    
-    [self addAlarmToTableWithDate:alarmTime secondInterval:self.seconds];
+    NSLog(@"scheduld for %@, min %i, sec %i", alarmTime, self.seconds, self.seconds);
+   
+    [self addAlarmToTableWithDate:alarmTime secondInterval:secondsIncludingMinutes];
     
 }
 /* nvm will do later
@@ -168,12 +181,21 @@
 // lazy instantiation, default settings
 
 const int DEFAULT_SEC = 5;
+const int DEFAULT_MIN = 0;
 - (int) seconds
 {
     if (!_seconds)
         _seconds = DEFAULT_SEC;
     return _seconds;
 }
+
+- (int) minutes
+{
+    if (!_minutes)
+        _minutes = DEFAULT_MIN;
+    return _minutes;
+}
+
 
 
 #pragma mark - Table view data source
