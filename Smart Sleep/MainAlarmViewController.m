@@ -45,7 +45,7 @@
     //assumes self.seconds >= 60
     int leftoverSeconds = self.seconds % 60;
     // will in future be self.seconds
-    self.minutes += ((self.seconds - leftoverSeconds) / 60);
+    self.minutes = ((self.seconds - leftoverSeconds) / 60);
     self.seconds = leftoverSeconds;
 }
 
@@ -55,18 +55,23 @@
 
 - (IBAction)alarmPressed:(id)sender {
     
-    int secondsIncludingMinutes = self.seconds + self.minutes * 60;
+    int secondsIncludingMinutes = self.seconds + (self.minutes * 60);
     NSDate *alarmTime = [[NSDate date] dateByAddingTimeInterval:secondsIncludingMinutes];
     // need to set alarm, add the minute :O
     
     UILocalNotification *alarmNotification =[[UILocalNotification alloc]init];
     alarmNotification.fireDate = alarmTime;
-    alarmNotification.alertBody = [NSString stringWithFormat: @"hey my alert fired %@, min %i, sec %i", alarmTime, self.minutes, self.seconds];
+    alarmNotification.alertBody = [NSString stringWithFormat: @"alrt frd %@, min %i, sec %i", alarmTime, self.minutes, self.seconds];
     alarmNotification.soundName = UILocalNotificationDefaultSoundName;
     //alarmNotification.applicationIconBadgeNumber = 1;
     [[UIApplication sharedApplication] scheduleLocalNotification:alarmNotification];
-    NSLog(@"scheduld for %@, min %i, sec %i", alarmTime, self.seconds, self.seconds);
+    
+    //sidenote: this nslog gives ____ and I have no idea why: 2014-02-15 22:10:50.931 Smart Sleep[14330:70b] scheduld for 2014-02-16 03:11:55 +0000, min 1, sec 5
+    // wtf why it adjust the date by 5 hours, 1 min, 5 sec in advance BUT still function just as well??????
+    NSLog(@"scheduld for %@, min %i, sec %i", alarmTime, self.minutes, self.seconds);
    
+    
+    // this will handle the updateUI too
     [self addAlarmToTableWithDate:alarmTime secondInterval:secondsIncludingMinutes];
     
 }

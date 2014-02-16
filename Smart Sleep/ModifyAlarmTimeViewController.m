@@ -35,6 +35,10 @@
     
 }
 
+- (IBAction)cancelButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"dismiss w/o anything set. cancel");
+}
 
 #pragma mark -
 #pragma mark PickerView DataSource
